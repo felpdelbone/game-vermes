@@ -1,0 +1,251 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>Sala de Fuga: Biologia</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body> -->
+  <!-- Welcome Screen -->
+  <!-- <div id="welcome-screen" class="screen active">
+    <div class="container">
+      <h1 class="game-title">Escaperoom: Biologia</h1>
+      <p class="intro-text">
+        Você está preso em uma série de salas com tema de biologia. Para escapar, você deve resolver
+        quebra-cabeças biológicos em cada sala. Responda corretamente para desbloquear novas áreas e
+        continue sua jornada científica para a liberdade!
+      </p>
+      <button id="start-btn" class="primary-btn">Iniciar Aventura</button>
+    </div>
+  </div> -->
+
+  <!-- Room Selection Screen -->
+  <!-- <div id="room-selection-screen" class="screen">
+    <div class="container">
+      <h2>Selecione uma Sala</h2>
+      <div id="points-display" class="points">Pontos: 0</div>
+      <div class="rooms-grid">
+        <div class="room" data-room="Laboratório">
+          <div class="room-icon">🧪</div>
+          <h3>Laboratório</h3>
+          <div class="room-status unlocked">Desbloqueado</div>
+        </div>
+        <div class="room" data-room="Jardim">
+          <div class="room-icon">🌿</div>
+          <h3>Jardim</h3>
+          <div class="room-status locked">Bloqueado</div>
+        </div>
+        <div class="room" data-room="Hospital">
+          <div class="room-icon">🏥</div>
+          <h3>Hospital</h3>
+          <div class="room-status locked">Bloqueado</div>
+        </div>
+        <div class="room" data-room="Estufa">
+          <div class="room-icon">🌱</div>
+          <h3>Estufa</h3>
+          <div class="room-status locked">Bloqueado</div>
+        </div>
+        <div class="room" data-room="Microscópio">
+          <div class="room-icon">🔬</div>
+          <h3>Microscópio</h3>
+          <div class="room-status locked">Bloqueado</div>
+        </div>
+        <div class="room" data-room="Laboratório Avançado">
+          <div class="room-icon">🧬</div>
+          <h3>Laboratório Avançado</h3>
+          <div class="room-status locked">Bloqueado</div>
+        </div>
+      </div>
+      <div class="progress-info">
+        <p id="room-progress-text">Progresso: 0/3 questões respondidas corretamente</p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Question Screen -->
+  <!-- <div id="question-screen" class="screen">
+    <div class="container">
+      <div class="question-header">
+        <h2 id="current-room-name">Nome da Sala</h2>
+        <div class="timer-container">
+          <div class="timer-bar">
+            <div id="timer-progress" class="timer-progress"></div>
+          </div>
+          <div id="timer-text">15</div>
+        </div>
+      </div>
+      <div class="question-container">
+        <div class="question-image-container">
+          <img id="question-image" src="" alt="Imagem da Questão">
+        </div>
+        <div class="question-text-container">
+          <h3 id="question-text">Texto da questão aqui</h3>
+        </div>
+        <div class="options-container">
+          <button class="option-btn" data-index="0">Opção 1</button>
+          <button class="option-btn" data-index="1">Opção 2</button>
+          <button class="option-btn" data-index="2">Opção 3</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Hint Screen -->
+  <!-- <div id="hint-screen" class="screen">
+    <div class="container">
+      <h2>Dica</h2>
+      <div class="hint-container">
+        <div class="hint-icon">💡</div>
+        <p id="hint-text">Texto da dica aqui</p>
+      </div>
+      <div class="timer-container">
+        <div class="timer-bar">
+          <div id="hint-timer-progress" class="timer-progress"></div>
+        </div>
+        <div id="hint-timer-text">15</div>
+      </div>
+      <p class="hint-footer">Retornando para a seleção de sala...</p>
+    </div>
+  </div> -->
+
+  <!-- Feedback Overlay -->
+  <!-- <div id="feedback-overlay" class="overlay">
+    <div class="feedback-message">
+      <p id="feedback-text">Correto! Sala desbloqueada!</p>
+    </div>
+  </div> -->
+
+  <!-- Script imports -->
+  <!-- <script type="module" src="./js/main.js"></script>
+</body>
+</html> -->
+
+<!-- index.html corrigido com nomes das salas em português -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sala de Fuga: Biologia</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Tela de boas-vindas -->
+  <div id="welcome-screen" class="screen active">
+    <div class="container">
+      <h1 class="game-title">Escaperoom: Biologia</h1>
+      <p class="intro-text">
+        Você está preso em uma série de salas com tema de biologia. Para escapar, você deve resolver
+        quebra-cabeças biológicos em cada sala. Responda corretamente para desbloquear novas áreas e
+        continue sua jornada científica para a liberdade!
+      </p>
+      <button id="start-btn" class="primary-btn">Iniciar Aventura</button>
+    </div>
+  </div>
+
+  <!-- Tela de seleção de salas -->
+  <div id="room-selection-screen" class="screen">
+    <div class="container">
+      <h2>Selecione uma Sala</h2>
+      <div id="points-display" class="points">Pontos: 0</div>
+      <div class="rooms-grid">
+        <div class="room" data-room="Laboratório">
+          <div class="room-icon">🧪</div>
+          <h3>Laboratório</h3>
+          <div class="room-status unlocked">Desbloqueado</div>
+        </div>
+        <div class="room" data-room="Jardim">
+          <div class="room-icon">🌿</div>
+          <h3>Jardim</h3>
+          <div class="room-status locked">Bloqueado</div>
+        </div>
+        <div class="room" data-room="Hospital">
+          <div class="room-icon">🏥</div>
+          <h3>Hospital</h3>
+          <div class="room-status locked">Bloqueado</div>
+        </div>
+        <div class="room" data-room="Estufa">
+          <div class="room-icon">🌱</div>
+          <h3>Estufa</h3>
+          <div class="room-status locked">Bloqueado</div>
+        </div>
+        <div class="room" data-room="Microscópio">
+          <div class="room-icon">🔬</div>
+          <h3>Microscópio</h3>
+          <div class="room-status locked">Bloqueado</div>
+        </div>
+        <div class="room" data-room="Laboratório Avançado">
+          <div class="room-icon">🧬</div>
+          <h3>Laboratório Avançado</h3>
+          <div class="room-status locked">Bloqueado</div>
+        </div>
+      </div>
+      <div class="progress-info">
+        <p id="room-progress-text">Progresso: 0/3 questões respondidas corretamente</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tela de perguntas -->
+  <div id="question-screen" class="screen">
+    <div class="container">
+      <div class="question-header">
+        <h2 id="current-room-name">Nome da Sala</h2>
+        <div class="timer-container">
+          <div class="timer-bar">
+            <div id="timer-progress" class="timer-progress"></div>
+          </div>
+          <div id="timer-text">15</div>
+        </div>
+      </div>
+      <div class="question-container">
+        <div class="question-image-container">
+          <img id="question-image" src="" alt="Imagem da Questão">
+        </div>
+        <div class="question-text-container">
+          <h3 id="question-text">Texto da questão aqui</h3>
+        </div>
+        <div class="options-container">
+          <button class="option-btn" data-index="0">Opção 1</button>
+          <button class="option-btn" data-index="1">Opção 2</button>
+          <button class="option-btn" data-index="2">Opção 3</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tela de dica -->
+  <div id="hint-screen" class="screen">
+    <div class="container">
+      <h2>Dica</h2>
+      <div class="hint-container">
+        <div class="hint-icon">💡</div>
+        <p id="hint-text">Texto da dica aqui</p>
+      </div>
+      <div class="timer-container">
+        <div class="timer-bar">
+          <div id="hint-timer-progress" class="timer-progress"></div>
+        </div>
+        <div id="hint-timer-text">15</div>
+      </div>
+      <p class="hint-footer">Retornando para a seleção de sala...</p>
+    </div>
+  </div>
+
+  <!-- Feedback -->
+  <div id="feedback-overlay" class="overlay">
+    <div class="feedback-message">
+      <p id="feedback-text">Correto! Sala desbloqueada!</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
