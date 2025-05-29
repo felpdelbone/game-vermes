@@ -1,0 +1,129 @@
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply animations */
+.screen.active {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.room {
+  animation: slideInUp 0.4s ease forwards;
+  animation-delay: calc(var(--animation-order) * 0.1s);
+}
+
+.room:nth-child(1) { --animation-order: 1; }
+.room:nth-child(2) { --animation-order: 2; }
+.room:nth-child(3) { --animation-order: 3; }
+.room:nth-child(4) { --animation-order: 4; }
+.room:nth-child(5) { --animation-order: 5; }
+.room:nth-child(6) { --animation-order: 6; }
+
+.room.unlocked:hover .room-icon {
+  animation: pulse 1s ease infinite;
+}
+
+.option-btn:active {
+  animation: pulse 0.3s ease;
+}
+
+.feedback-message {
+  animation: slideInUp 0.4s ease forwards;
+}
+
+.hint-icon {
+  animation: pulse 2s ease infinite;
+}
+
+.shake {
+  animation: shake 0.5s ease;
+}
+
+.correct-answer {
+  background-color: var(--success-500) !important;
+  color: white !important;
+  border-left-color: var(--success-500) !important;
+}
+
+.wrong-answer {
+  background-color: var(--error-500) !important;
+  color: white !important;
+  border-left-color: var(--error-500) !important;
+}
+
+.locked-animation {
+  animation: shake 0.5s ease;
+}
+
+/* Timer animation */
+@keyframes timerWarning {
+  0%, 100% {
+    background-color: var(--warning-500);
+  }
+  50% {
+    background-color: var(--error-500);
+  }
+}
+
+.timer-warning {
+  animation: timerWarning 1s ease infinite;
+}
