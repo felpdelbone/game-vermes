@@ -32,11 +32,11 @@ function handleAnswerSelection(selectedIndex) {
     
     // Show feedback
     if (roomUnlocked) {
-      showFeedback(`Correct! New room unlocked!`, true, () => {
+      showFeedback(`Correto, Nova sala liberada`, true, () => {
         showRoomSelectionScreen();
       });
     } else {
-      showFeedback(`Correct! ${gameState.getCurrentRoomProgress()}/${gameState.questionsToUnlock} completed.`, true, () => {
+      showFeedback(`Correto! ${gameState.getCurrentRoomProgress()}/${gameState.questionsToUnlock} concluídas.`, true, () => {
         // Check if there are more questions
         if (gameState.nextQuestion()) {
           // Update UI with next question
@@ -51,7 +51,7 @@ function handleAnswerSelection(selectedIndex) {
     }
   } else {
     // Show feedback and then the hint
-    showFeedback('Incorrect!', false, () => {
+    showFeedback('Incorreto!', false, () => {
       showHintScreen(currentQuestion.hint);
     });
   }
